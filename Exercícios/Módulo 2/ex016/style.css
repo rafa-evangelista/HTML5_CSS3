@@ -1,0 +1,38 @@
+/* a tag abaixo é utilizada em CSS para compatibilizar a formatação com caracteres especiais (acentos, cedilha,...) */
+@charset "UTF-8";
+
+*{
+    *font-family: arial, helvetica, sans-serif;
+    /* Tag utilizada para escolha da fonte */
+}
+body{
+    background-image: linear-gradient(to right, #7726DE, #10DE47);
+    /* background-image: tag utilizada para escolher cor de fundo (nesse caso o "linear-gradiente" é tratado como uma imagem) */
+    /* linear gradient: tag utilizada para criar um degradê. Costuma-se usar o parâmetro "to right", "to left", "to bottom" ou "to up" */
+}
+
+main{
+    background-color: white; /* cor de fundo*/
+    border-radius: 1.5em; /* arredondar os cantos da folha*/
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.473); /* inserir sombreamento a folha*/
+    width: 600px;/* largura da folha*/
+    padding: 2em; /* recuo de texto a partir da margem*/
+    margin: auto;/*centralização da folha na tela*/
+}
+h1{
+    color: #DE993C; /*cor da fonte*/
+    text-align: center; /*alinhamento do texto*/
+    font-size: 3em; /*tamanho da fonte*/
+    text-shadow: 1px 1px 1px black; /*sombreamento da fonte*/
+}
+
+h2{
+    background-color: #138F34;
+    color: #450A91;
+    text-indent: 2.5em; /*insere recuo de parágrafo ao texto*/
+}
+
+p{
+    text-align: justify;
+    text-indent: 4em;
+}

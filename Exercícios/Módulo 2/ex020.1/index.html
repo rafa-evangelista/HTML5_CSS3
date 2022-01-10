@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificação em CSS</title>
+    <style>
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+            margin: 2em;
+            padding: 2em;
+
+        }
+       h1 {
+           font: italic bolder 2em courier;
+           color: cornsilk;
+           background-color: rgba(49, 109, 165, 0.466);
+           text-align: center;
+       }
+
+       p {
+           text-indent: 3em;
+       }
+
+       div {
+           display: inline-block;
+           height: 200px;
+           width: 200px;           
+           border: 1px solid black;           
+       }
+
+        div#area01 {
+            background-color: darkred;                   
+       }
+       
+       div#area02 {
+           background-color: darkolivegreen;
+        }
+
+       div#area03, div#area05 {
+            background-color:darkblue;
+        }
+
+       div#area04 {
+           background-color: lightgray;
+        }
+
+       div > p {
+           display: none;
+       }
+
+       div:hover > p {
+           display: block;
+           font: italic bolder 2em Georgia;           
+           text-align: center;
+           color: white;
+           text-indent: 0%;
+       }
+       
+    </style>
+</head>
+<body>
+        <h1>Identificadores em CSS</h1>
+        <p>No Exercício anterior, vimos as <mark>classes</mark> e entendemos que vários elementos podem ter uma mesma classe.  Mas se quisermos <mark>identificar</mark> os elementos, dando um "nome" específico para cada um, podemos usar os IDs.  Em um mesmo documento, <strong>não podemos ter dois elementos com o mesmo ID!</strong></p>
+        <div id="area01"><p>ESTA COR É DARKRED</p></div>
+        <div id="area02"><p>ESTA COR É DARKOLIVERGREEN</p></div>
+        <div id="area03"><p>ESTA COR É DARKBLUE</p></div>
+        <div id="area04"><p>ESTA COR É LIGHTGRAY</p></div>
+        <div id="area05"><p>ESTA COR É DARKBLUE</p></div>
+</body>
+</html>

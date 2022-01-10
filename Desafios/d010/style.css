@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'idroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(109, 165, 109);    
+}
+
+header {
+    background-image: linear-gradient(to bottom,rgb(101, 150, 97),rgb(7, 80, 5));
+    padding-top: 0.5em;
+    padding-bottom: 3.5em;
+    margin-bottom: none;
+    box-shadow: 3px 2px 6px 6px rgba(0, 0, 0, 0.418);
+    width: 100%;
+}
+
+h1#principal {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    font-family: arial, Helvetica, sans-serif;
+    background-color: transparent;
+    padding: none;
+    border: none;
+}
+
+h2#secundario {
+    color: rgba(255, 250, 250, 0.452);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: sans-serif;    
+}
+
+.classmenu {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:1em;
+    text-decoration: none;    
+}
+
+li a:hover {
+    color: black;
+}
+
+main {
+    background-color: white;
+    padding-top: 2em;
+    width: 800px;    
+    margin: auto;
+    box-shadow: 3px 2px 6px 6px rgba(0, 0, 0, 0.418);
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'idroid';
+    color: darkgreen;
+    padding-left: 1em;
+    text-align: left;
+}
+
+.area02 {    
+    background-image: linear-gradient(to right,rgb(138, 180, 108), white);
+    color: rgb(85, 141, 85);    
+    margin: 1.5em;
+    font-family: idroid;
+    text-indent: 1em;
+}
+
+p {
+    text-align: justify;
+    text-indent: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0em 2em;
+}
+
+img.bugdroid {
+    display: block;
+    margin: auto;    
+}
+
+img.irina {
+    display: block;
+    margin: auto;
+    width: 90%;
+        
+}
+
+section#video {
+    background-color: darkgreen;
+    margin: none;
+    width: 800px;
+    height: 450px;    
+}
+
+iframe.video1 {
+    display: block;
+    margin: auto;
+    padding: 1em;
+}
+
+.area {
+    display: inline-block;
+    padding-right: 140px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.queraprendermais {
+    padding-bottom: 1em;
+}
+
+.ultimo {
+    padding-bottom: 0.8em;
+    margin: 1em 1em 1em 1em;
+    background-color: rgb(165, 212, 143);
+    width: 95%;
+    border-radius: 2%;
+}
+
+h3 {
+    padding-left: 2em;
+    padding-top: 1.5em;
+    margin: none;
+    background-color:green;
+    height: 3em;
+    color: white;
+    
+}
+
+footer {
+    background-color:rgba(7, 68, 7, 0.87);
+    padding: 0.5em;    
+}
+
+footer > p {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;    
+}
+
+footer > p > a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}

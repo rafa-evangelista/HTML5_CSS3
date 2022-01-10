@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML.5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <!-- Tag "picture" usada para inserir uma IMAGEM DINÂMICA. Parâmetro "source media" indica configurações da foto (max-width indica a largura máxima da foto). Parâmetro "srcset" indica o local da foto e o parâmetro "type" indica o tipo de arquivo a ser utilizado -->
+    <!-- No comando abaixo a interpretação seria a seguinte: se a tamanho da tela for até "750px", utilizar a imagem "foto-p.png". Se o tamanho da tela for até "1050px", utilizar a imagem "foto-m.png", caso contrário, utilizar a "foto-g.png"-->
+    <!-- A sintaxe do comando tem que ser sempre da imagem menor --- imagem média --- imagem grande -->
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">        
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML.5.</p>
+
+    <!-- A tag "audio" serve para inserir áudio na página. O parâmetro "preload" indica os dados que serão inseridos junto com a mídia. O parâmetro "controls" indica se  os controles de reprodução aparecerão na tela. O parâmetro "autoplay" indica se o arquivo de mídia será reproduzido logo após o carregamento da página. O parâmetro "loop"  indica se o arquivo será reproduzido novamente após o término -->
+
+    <audio preload="metadata" controls autoplay loop>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg"></source>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg"></source>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg"></source>
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+    </audio>
+   
+</body>
+</html>

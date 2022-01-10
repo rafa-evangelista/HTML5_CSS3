@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+    BODY {
+        background-color: black !important;
+    }
+    
+    H1 {
+        color: white;
+        text-align: center;
+        font-size: 40pt;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    p {
+        text-align: center;        
+    }
+
+    a{
+        color: white;
+        font-size: 15pt;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }

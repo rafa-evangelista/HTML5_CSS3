@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Preste atenção para não errar a configuração do comando acima pois pode afetar os comandos abaixo. Tem que ser exatamente igual ao que está descrito acima (inclusive com o ";" */
+
+body{ 
+    background-color: rgb(205,255,203);
+    font-family: arial, helvetica, sans-serif;
+}
+ 
+h1{
+    color: rgb(4, 109, 0);
+}
+
+/* Personalizando um parâmetro (h1 neste caso) usando o "id". O parâmetro que se deseja personalizar deve receber no arquivo html a seguinte descrição: <"parametro" id="nomedoparametro". No arquivo "style.css" a referência a ele deve ser feita como abaixo ou apenas "#principal" 
+Tudo o que em HTML é "id", em CSS vira "#"
+Tudo o que em HTML é "class", em CSS vira "."
+Dentro de um mesmo documento HTML só pode existir um elemento "id"
+*/
+h1#principal {
+    text-align: center;
+    background-color: rgb(4, 109, 0);
+    color: white;
+}
+
+h2{
+    color: rgb(73, 109, 71);
+}
+
+.basico{
+    color: rgb(0, 165, 165);
+    font-weight: bolder;
+}
+
+.intermediario{
+    color: rgb(175, 149, 78);
+    font-weight: bolder;
+}
+
+.avancado{
+    color: red;
+    font-weight: bolder;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+    <h1>USANDO LINKS EXTERNOS</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external"> repositório público no GitHub</a></p>
+    <!-- Tag "a" inserida dentro de uma tag "p" para criar um link. Parâmetro "href" é utilizado para colocar a url completa do endereço de destino. Parâmetro "target" utilizado para definir se a página destino será aberta numa nova aba ("_blank") ou por cima da página atual (_self). Parâmetro "rel" utilizado para definir se a página a ser visitada está na própria pasta raiz (next) ou é externa (external)-->
+
+    <p>Você também pode acessar o meu <a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank" rel="external"> canal gratuito no YouTube</a></p>
+
+    <h1>USANDO LINKS INTERNOS</h1>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" target="self" rel="next"> segunda página</a></p>
+    <p>Você também pode acessar a nossa <a href="Notícia/pag003.html" target="self" rel="next"> página de notícias</a></p>
+
+    <h1>LINKS PARA DOWNLOAD</h1>
+    <ul>
+        <li><a href="Livros/meulivro.pdf" download="meulivro.pdf" type="application/pdf"> Baixar o livro em PDF</a></li> <!-- Esse é um link para download de arquivo inserido dentro de uma lista. Parâmetro "href" indica o local onde o arquivo para download está localizado.  Parâmetro "download" indica o nome do arquivo a ser baixado.  Parâmetro "type" indica o tipo de arquivo a ser baixado. -->
+        <li><a href="Livros/meulivro.zip" download="meulivro.zip" type="application/zip"> Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Código acima para importar uma fonte de um site da internet. O código é gerado na própria página, bastando apenas copiar e colar na folha de CSS */
+
+@font-face {
+    font-family: 'android'; 
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    /* Código acima para importar uma fonte baixada para o computador */
+}
+
+ :root {   
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /* Área acima para declaração das variáveis de cores na CSS.  Variável sempre com "--" + nome */
+
+    --fonte-padrão: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'android', cursive;
+    /* Área acima para declaração das variáveis de fontes na CSS.  Variável sempre com "--" + nome */
+}
+
+*{    /* Essa configuração " *{} " indica que as especificações abaixo valerão para todos os elementos da página HTML.  São chamadas de configurações globais.*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrão);
+}
+
+a.externo::after {
+    content: '\00a0\1f517';
+}
+
+header {
+    background-image: linear-gradient(to bottom,var(--cor3), var(--cor5));    /* criando o degradê do cabeçalho*/
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {  /* Para indicar que está configurando apenas o h1 que está dentro do header */
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.555);
+    font-weight: normal;  
+}
+
+header > p {
+    color: white;
+    font-size: 1.2em;
+    font-family: var(--fonte-padrão);
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.555); 
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.918);
+}
+
+nav > a { /*configurando os ítens do menu*/
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s; /*tempo de duração do efeito quando o mouse passa sobre os menus*/
+}
+
+    nav > a:hover {   /*configurando somente o momento quando o mouse passar sobre os ítens do menu*/
+    background-color: var(--cor3);    
+    color: var(--cor5);
+    }
+
+main {
+    background-color: white;
+    min-width: 300px;  /* configurando a largura mínima do Main para ajuste do conteúdo  na tela (não diminuir tanto)*/
+    max-width: 1000px;  /* configurando a largura máxima do Main para ajuste do conteúdo na tela (não quebrar demais)*/
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px; /*colocando cantos arredondados no Main*/
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+}
+
+main  h1 { /* Está sem o ">" para indicar que esta configuração é válida para todos os "h1" dentro do "Main" (dentro de todas as seções) */
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;    
+}
+
+
+main  h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    font-weight: normal;
+}
+
+main p {   /*colocado sem o sinal de " > " para indicar que engloba todas os outros parágrafos que possam estar contidos denro das subsessões*/
+    margin: 1em 0em;
+    text-align: justify;
+    text-indent: 2em;  /* recuo de parágrafo*/
+    font-size: 1.1em;
+    line-height: 2em; /*espaçamento entre as linhas*/
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main img {
+    width: 100%; /*configurando para as imagens contidas no Main se ajustarem automaticamente a largura da tela*/
+
+}
+
+main img.pequena {
+    max-width: 350px; /*configurando para a imagem se ajustar ao tamanho da largura da tela*/
+    display: block; /*configuração necessária para fazer o alinhamento central da imagem no ítem abaixo*/
+    margin: 0 auto; /*alinhamento da imagem centralizado*/
+}
+
+div.video {  /*Ajustes para o vídeo ficar responsivo (ajustando o tamanho automaticamente a tela*/
+    background-color: var(--cor5);    
+    margin: 0px -20px 30px -20px;
+    padding: 20px;    
+    padding-bottom:58%;
+    position: relative;
+}
+
+div.video > iframe { /*Ajustes para o vídeo ficar responsivo (ajustando o tamanho automaticamente a tela*/
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.404)
+}
+
+aside > ul {
+    list-style-position: inside;   /* colocar o símbolo da UL para dentro do aside */ 
+    columns: 2; /* dividir a lista em duas colunas */
+    list-style-type: '\2714\00a0\00a0'; /* inserindo uma figura extraída da EMOJIPEDIA como marcador da UL. O código "00a0" serve para dar um espaço entre a imagem e o texto (nesse caso foram dados dois espaços).  Esse espaçamento não é compatível com todos os navegadores*/
+    font-weight: 500;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: (var(--cor1));
+}

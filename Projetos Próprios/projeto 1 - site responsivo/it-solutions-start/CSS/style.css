@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* { /* configuração padrão para zerar margens, paddings e box sizing para permitir a posterior configuração dentro dos parâmetros CSS. */
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;    
+} 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* configuração para fazer os links assumirem a cor definida nas configurações CSS. */
+}
+
+/* navbar */
+
+#navbar {
+    width: 100%;
+    height: 80px;
+    background: #111;
+    color: #eee;    
+    position: fixed; /* Recurso similar ao "congelar painéis" no excel */
+}
+
+#navbar-container {
+    width: 80%;
+    height: 100%;
+    margin: auto; /*usado para centralizar o conteúdo ou bloco no container*/
+    display: flex ; ; /*Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.*/ 
+    justify-content: space-between; /* Espaçamento HORIZONTAL do container. "Space-Between" cria um espaçamento horizontal igual entre os elementos. Mantendo o primeiro grudado no início do bloco e o último no final do bloco.*/
+    align-items: center; /*Essa propriedade permite o alinhamento central do único bloco no eixo VERTICAL. Propriedade normalmente utilizada com a propriedade "Justify-content" para alinhamento do bloco dentro de outro bloco.*/
+
+    /* O parâmetro "align-content" também serve para fazer o alinhamento VERTICAL no bloco. No entanto deve ser utilizado quando o bloco possui duas linhas ou mais*/
+}
+
+.logo{
+    font-size: 2em;
+}
+
+#navbar-items {
+    display: flex;
+    list-style: none; /*utilizado para retirar a "marcação inicial" de uma UL*/
+    text-transform: uppercase; /* transforma as letras em maiúsculas*/
+}
+
+#navbar-items li {
+    padding: 10px;
+}
+
+/* Showcase */
+#showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background: url('../img/showcase.jpg') no-repeat center center/cover; /*propriedade para colocar uma imagem como plano de fundo*/
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color; /* utilizado para ajustar o brilho da imagem.  O nível de brilho deve ser ajustado na propriedade "background-color (último ítem "0.5")."*/
+}
+
+#showcase-container {
+    text-align: center;
+}
+
+#showcase-container h2{
+    font-size: 2.5em;
+}
+#showcase-container p{
+    font-size: 1.2em;
+    padding: 7px;
+}
+
+.btn{
+    display: inline-block; /* Parâmetro do seletor "display" que permite exibir o conteúdo em linha com propriedades do parâmetro block*/
+    padding: 15px 60px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    background: #111;
+    color: #eee;
+    border-radius: 5px;
+    transition: 500ms ease; /*efeito de transição*/
+}
+
+.btn:hover{ /* definir ação quando o mouse passar sobre a "classe". */
+    cursor: pointer; /* pointer = mão que substitui a seta do mouse quando o mesmo passa sobre os links. */
+    background: #000;
+    font-weight: bolder;
+}
+
+/* Clients */
+
+#clients {
+    width: 100%;
+    background: #eee;
+    color: #111;
+    padding: 50px;
+}
+
+.headline {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+#clients-container {
+    display: grid; /* permite colocar imagens blocos. */
+    grid-template-columns: repeat(4, 1fr); /* imagens serão colocadas em blocos(4) divididos em 1 linha (fr)*/
+    justify-items: center; /* alinha os ítens ao centro */
+    padding: 15px;
+}
+
+.client {
+    display: inline-block;
+    width: 25%;
+}
+
+/* Feature */
+
+#features {
+    width: 100%;
+    background: #222;
+    color: #eee;
+    padding: 50px;
+}
+#features-container {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.feature-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Product */
+
+#product {
+    width: 100%;
+    padding: 50px;
+}
+
+#product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#items {
+    width: 650px;
+}
+
+#items .item {
+    display: flex;
+    padding: 50px;
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+/* Testimonials */
+
+#testimonials {
+    width: 100%;
+    background: #222;
+    color: #eee;
+    padding: 50px;
+}
+
+#testimonials-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonial {
+    display: flex;    
+    align-items: center;
+    font-size: 1.2em;
+    background: #333;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;    
+}
+
+.testimonial-image {   
+    border-radius: 50%;
+    height: 200px;
+    width: auto;
+    margin: 15px;   
+}
+
+
+/* Gallery */
+
+#gallery {
+    width: 90%;
+    margin: auto;
+    padding: 50px;
+}
+
+#gallery-container {
+    display: inline-block;
+    grid-template-columns: repeat (3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.gallery-image {
+    display: inline-block;
+    width: 365px;
+    height: 244px;
+    border-radius: 5px;    
+}
+
+
+/* Footer */
+
+#footer {
+    background: #222;
+    color: #eee;
+    padding: 30px;
+    text-align: center;
+}

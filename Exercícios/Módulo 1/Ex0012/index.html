@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML.5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+    <!-- Tag "video" é utilizada para inserir vídeo na página HTML. Parâmetro "width" utilizado para dimensionar o tamanho do vídeo na tela. Parãmetro "poster" serve para inserir uma imagem enquanto o vídeo não tem a reprodução iniciada -->
+    <!-- Nesse caso é necessário inserir a tag "source" e o parâmetro "src". Será reproduzido apenas o primeiro vídeo da lista. Caso o navegador não suporte o tipo de arquivo, será reproduzido o próximo, até o último arquivo. Se não for possível, será exibida a mensagem que está na tag "p" -->
+    <!-- Este método de inserção de vídeo não é recomendado pois demanda muito consumo de banda do servidor -->
+
+    <video width="700" poster="Imagem/limoes-capa.png"controls autoplay loop>
+        <source src="Vídeos/meu-video.mp4" type="video/mp4">
+        <source src="Vídeos/meu-video.m4v" type="video/mp4">
+        <source src="Vídeos/meu-video.webm" type="video/webm">
+        <source src="Vídeos/meu-video.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    
+    <h1>Inserindo vídeos hospedados externamente</h1>
+    <p>Este vídeo está hospedado em servidores externos</p>
+
+    <!-- Este é o método indicado para inserir vídeos em sites.  Pode-se inserir vídeos que estejam no youtube ou vimeo. Basta ir até o site, clicar em "compartilhar", clicar em "incorporar", copiar a tag gerada e colar no navegador, conforme abaixo -->
+
+    <iframe width="700" height="315" src="https://www.youtube.com/embed/0xNO4NjTnfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
